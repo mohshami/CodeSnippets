@@ -20,7 +20,7 @@ if [ ! -z $1 ]; then
 else
 	pkgServer=192.168.1.150
 fi
-release=`$UNAME -r | $SED -r "s/([0-9]+).([0-9]+)-RELEASE/\1\2x64/"`
+release=`$UNAME -r | $SED -r "s/([0-9]+).([0-9]+)-RELEASE.*/\1\2x64/"`
 
 export PACKAGESITE=http://$pkgServer/$release-default
 
